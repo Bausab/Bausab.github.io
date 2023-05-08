@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Box-icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+    <!-- Glidejs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.css">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
-    <title>Cart Page</title>
+    <title>Spirit Nepal</title>
 </head>
 <body>
-    <!-- Top Nav  -->
+    <!-- Header -->
+    <header class="header" id="header">
+        <!-- top nav -->
         <div class="top-nav">
             <div class="container d-flex">
                 <p>Order Online or Call us: (+977)9816191434</p>
@@ -69,138 +73,34 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Cart Items  -->
-    <div class="container cart">
-        <table>
-            <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="./Images/product2.png" alt="">
-                        <div>
-                            <p>British Army Combat Bag</p>
-                            <span>Price:Rs 8000/- </span>
-                            <br/>
-                            <a href="#">remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <input type="number" value="1" min="1" />
-                </td>
-                <td>Rs 8200/- </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="./Images/product5.jpg" alt="">
-                        <div>
-                            <p>Hip-Hop T-shirt</p>
-                            <span>Price:Rs 1200/- </span>
-                            <br/>
-                            <a href="#">remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <input type="number" value="1" min="1" />
-                </td>
-                <td>Rs 1400/- </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="./Images/product3.jpg" alt="">
-                        <div>
-                            <p>Winter Hoodies</p>
-                            <span>Price:Rs 1900/- </span>
-                            <br/>
-                            <a href="#">remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <input type="number" value="1" min="1" />
-                </td>
-                <td>Rs 2100/- </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="./Images/goldstar.jpg" alt="">
-                        <div>
-                            <p>New Goldstar V-110 trekking shoes in the town.</p>
-                            <span>Price:Rs 1500/- </span>
-                            <br/>
-                            <a href="#">remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <input type="number" value="1" min="1" />
-                </td>
-                <td>Rs 1700/- </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="./Images/product8.jpg" alt="">
-                        <div>
-                            <p>Best Women Fashion This Time | Indian fashion Kurtha, Casual indian fashion</p>
-                            <span>Price:Rs 2800/- </span>
-                            <br/>
-                            <a href="#">remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <input type="number" value="1" min="1" />
-                </td>
-                <td>Rs 3000/- </td>
-            </tr>
-        </table>
-        <div class="total-price">
-            <table>
-              <tr>
-                <td>Subtotal</td>
-                <td>Rs 16300/- </td>
-              </tr>
-              <tr>
-                <td>Delivery Charge</td>
-                <td>Rs 200/- </td>
-              </tr>
-              <tr>
-                <td>Total</td>
-                <td>RS 16500/-</td>
-              </tr>
-            </table>
-            <a href="#" class="checkout btn">Proceed To Checkout</a>
-        </div>
-    </div>
-    
-    <!-- Latest Products -->
-    <section class="section featured">
+
+        <!-- All Products -->
+    <section class="section all-products" id="products">
         <div class="top container">
-          <h1>Latest Products</h1>
-          <a href="#" class="view-more">View more</a>
+          <h1>All Products</h1>
+          <form>
+            <select>
+              <option value="1">Defualt Sorting</option>
+              <option value="2">Sort By Price</option>
+              <option value="3">Sort By Popularity</option>
+              <option value="4">Sort By Sale</option>
+              <option value="5">Sort By Rating</option>
+            </select>
+            <span><i class="bx bx-chevron-down"></i></span>
+          </form>
         </div>
         <div class="product-center container">
           <div class="product-item">
             <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./Images/jordan.jpg" alt="" />
+              <a href="productDetails.html" class="product-thumb">
+                <img src="./Images/Skirt.jpg" alt="" />
               </a>
-              <span class="discount">Max Sell</span>
+              <span class="discount">Sale <br> -10 %</span>
             </div>
             <div class="product-info">
-              <span>BRANDED SHOES</span>
-              <a href="">AIR JORDAN 4 RETRO METALLIC RED</a>
-              <h4>Rs 4100/- </h4>
+              <span>WOMEN'S CLOTHES</span>
+              <a href="productDetails.html">Gathered crêpe skirt - Light brown - Ladies | H&M GB</a>
+              <h4>Rs 1000/- </h4>
             </div>
             <ul class="icons">
               <li><i class="bx bx-heart"></i></li>
@@ -211,14 +111,32 @@
           <div class="product-item">
             <div class="overlay">
               <a href="" class="product-thumb">
-                <img src="./Images/rolex.jpg" alt="" />
+                <img src="./Images/product2.png" alt="" />
               </a>
-              <span class="discount">40%</span>
+              <span class="discount">Season <br> Expired</span>
             </div>
             <div class="product-info">
-              <span>ACCESSORIES</span>
-              <a href="">Rolex Oyster | Dial 18K Yellow Gold Men's Watch</a>
-              <h4>Rs 45000/- </h4>
+              <span>MEN'S WEAR</span>
+              <a href="">British Army Combat Bag</a>
+              <h4>Rs 8000/- </h4>
+            </div>
+            <ul class="icons">
+              <li><i class="bx bx-heart"></i></li>
+              <li><i class="bx bx-search"></i></li>
+              <li><i class="bx bx-cart"></i></li>
+            </ul>
+          </div>
+          <div class="product-item">
+            <div class="overlay">
+              <a href="" class="product-thumb">
+                <img src="./Images/goldstar.jpg" alt="" />
+              </a>
+              <span class="discount"> HOT<br> 20% <br> OFF</span>
+            </div>
+            <div class="product-info">
+              <span>NEPALI BRAND SHOES</span>
+              <a href="">New Goldstar V-110 trekking shoes.</a>
+              <h4>Rs 1500/- </h4>
             </div>
             <ul class="icons">
               <li><i class="bx bx-heart"></i></li>
@@ -233,9 +151,27 @@
               </a>
             </div>
             <div class="product-info">
-              <span>MEN'S WEAR</span>
-              <a href="">Noise N 86 Brooklyn Snapback Cap</a>
+              <span>MEN'S WEAR </span>
+              <a href="">Noise N 86 Brooklyn Snapback Cap </a>
               <h4>Rs 600/- </h4>
+            </div>
+            <ul class="icons">
+              <li><i class="bx bx-heart"></i></li>
+              <li><i class="bx bx-search"></i></li>
+              <li><i class="bx bx-cart"></i></li>
+            </ul>
+          </div>
+          <div class="product-item">
+            <div class="overlay">
+              <a href="" class="product-thumb">
+                <img src="./Images/product3.jpg" alt="" />
+              </a>
+              <span class="discount">50%</span>
+            </div>
+            <div class="product-info">
+              <span>MEN'S CLOTHES</span>
+              <a href="">Winter Hoodies</a>
+              <h4>Rs 1100/-</h4>
             </div>
             <ul class="icons">
               <li><i class="bx bx-heart"></i></li>
@@ -260,8 +196,52 @@
               <li><i class="bx bx-cart"></i></li>
             </ul>
           </div>
+          <div class="product-item">
+            <div class="overlay">
+              <a href="" class="product-thumb">
+                <img src="./Images/rolex.jpg" alt="" />
+              </a>
+              <span class="discount">40%</span>
+            </div>
+            <div class="product-info">
+              <span>MEN'S WEAR</span>
+              <a href="">Rolex Oyster Perpetual Datejust 36 Champagne Dial 18K Yellow Gold Automatic Men's Watch </a>
+              <h4>Rs 45000/- </h4>
+            </div>
+            <ul class="icons">
+              <li><i class="bx bx-heart"></i></li>
+              <li><i class="bx bx-search"></i></li>
+              <li><i class="bx bx-cart"></i></li>
+            </ul>
+          </div>
+          <div class="product-item">
+            <div class="overlay">
+              <a href="" class="product-thumb">
+                <img src="./Images/jordan.jpg" alt="" /></a>
+              <span class="discount"> Max <br> Sell</span>
+            </div>
+            <div class="product-info">
+              <span>BRANDED SHOES</span>
+              <a href="">AIR JORDAN 4 RETRO METALLIC RED</a>
+              <h4>Rs 4100/- </h4>
+            </div>
+            <ul class="icons">
+              <li><i class="bx bx-heart"></i></li>
+              <li><i class="bx bx-search"></i></li>
+              <li><i class="bx bx-cart"></i></li>
+            </ul>
+          </div>
         </div>
       </section>
+     
+     <!-- Pagination  -->
+      <section class="pagination">
+        <div class="container">
+          <span>1</span> <span>2</span> <span>3</span> <span>4</span>
+          <span><i class="bx bx-right-arrow-alt"></i></span>
+        </div>
+      </section>
+        
 
     <!-- Footer -->
     <footer class="footer">
@@ -289,7 +269,7 @@
           </div>
         </div>
       </footer>
-
+     
     <!-- indexjs -->
     <script src="js/index.js"></script>
     
